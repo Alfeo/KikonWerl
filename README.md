@@ -1,5 +1,5 @@
 # Kikon
-Kikon vous permet de démarrer un nouveau projet Html en quelques secondes !
+Kikon vous permet de démarrer un nouveau projet Html en quelques secondes ! (Language PERL)
 
 Use it !
 perl Kikon.pl
