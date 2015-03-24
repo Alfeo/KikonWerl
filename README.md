@@ -1,29 +1,16 @@
-##########
-Catégorie : OUTILS
-Type : SCRIPT
-Language : PERL
-##########
+Catégorie : OUTILS / Type : SCRIPT / Language : PERL
 
-== KikonWerl ==
+KikonWerl version 2.0
 
-Kikon vous permet de démarrer un nouveau projet Html en quelques secondes !
-Werl vous permet de former rapidement un squelette html avec ajouts de div + attributs css.
+==========
 
-nb: Werl est à utiliser avec Kikon pour une expérience optimale.
+Description :
 
-Use it !
+- Kikon :
+Kikon vous permet de facilement démarrer un projet HTML en créant l'architecture MVC.
+Kikon vous demandera de saisir un nom pour votre projet et construira ensuite un dossier CSS, IMG et SCRIPT ainsi qu'un fichier HTML, CSS et JS portant le nom saisi au préalable.
+Il vous demandera alors si vous voulez utilisez bootstrap et/ou JQuery afin de mettre en place l'architecture du fichier HTML. Les fichiers CSS et JS sont déjà liés.
+Pour l'utiliser lancez le script avec la commande "perl Kikon.pl" et suivez les étapes.
 
-##########
-perl Kikon.pl
-
-- Création d'un dossier projet suivant le nom entré en paramètre.
-- Création des dossiers css, img, script
-- Création des fichiers html, css, script suivant le nom entré en paramètre.
-- Inclut la mise en place de la structure de votre fichier html.
-
-##########
-perl Werl.pl
-
-- Création d'un dossier projet suivant le nom entré en paramètre.
-- Création d'un dossier css + fichier ".css" suivant le nom entré en paramètre.
-- Création de div avec class + attributs css.
+- Werl :
+Werl est un utilitaire à utiliser en collaboration avec Kikon pour une expérience optimale. Ce script vous permettra de mettre en page rapidement un projet HTML en vous proposant une interface afin de placez vos première div en gérant le CSS (id, class et tout les attributs). 
