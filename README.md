@@ -1,7 +1,4 @@
 Catégorie : OUTILS / Type : SCRIPT / Language : PERL
-
-KikonWerl version 2.0
-
 ==========
 
 Description :
