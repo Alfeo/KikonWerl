@@ -1,5 +1,12 @@
-# KikonWerl
-Kikon vous permet de démarrer un nouveau projet Html en quelques secondes ! (Language PERL)
+##########
+Catégorie : OUTILS
+Type : SCRIPT
+Language : PERL
+##########
+
+== KikonWerl ==
+
+Kikon vous permet de démarrer un nouveau projet Html en quelques secondes !
 Werl vous permet de former rapidement un squelette html avec ajouts de div + attributs css.
 
 nb: Werl est à utiliser avec Kikon pour une expérience optimale.
