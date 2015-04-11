@@ -30,33 +30,41 @@ if ($choice == "1")
 	system("touch ./".$name."/css/".$name.".css");
 	system("touch ./".$name."/script/".$name.".js");
 
+	print("\n\nUtilisez vous JQuery ? [y/n] : ");
+	my $jque = <>;
+	chomp($jque);
+
+	system("echo \"<!DOCTYPE html>\n<html>\n\t<head>\" >> ./".$name."/".$name.".html");
+
+	if ($jque eq "y" || $jque eq "yes" || $jque eq "YES "|| $jque eq "Y")
+	{
+		print("\n\nEntrer Le Chemin vers '/jquery.js' : ");
+		my $pathj = <>;
+		chomp($pathj);
+		system("cp ".$pathj."/jquery.js ./".$name."/script");
+		system("echo \"\t\t<script type='text/javascript' src='./script/jquery.js'></script>\" >> ./".$name."/".$name.".html");
+		system("sleep 0.1");
+		system("echo \"jquery.js has been imported !\"")
+	}
+	
+	system("echo \"\t\t<script type='text/javascript' src='./script/".$name.".js'></script>\" >> ./".$name."/".$name.".html");
+	
 	print("\n\nUtilisez vous Bootstrap ? [y/n] : ");
 	my $boot = <>;
 	chomp($boot);
 	
-	print("\n\nUtilisez vous JQuery ? [y/n] : ");
-	my $jque = <>;
-	chomp($jque);
-	
-	if ($boot eq "y" && $jque eq "y" || $boot eq "yes" && $jque eq "yes")
+	if ($boot eq "y" || $boot eq "yes" || $boot eq "YES "|| $boot eq "Y")
 	{
-		system("echo \"<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<script type=\"text/javascript\" src=\"./script/jquery.js\"></script>\n\t\t<script type=\"text/javascript\" src=\"./script/".$name.".js\"></script>\n\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/bootstrap.css\">\n\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/".$name.".css\">\n\t\t<title>".$name."</title>\n\t\t<meta charset=\"utf-8\">\n\t</head>\n\t<body>\n\t</body>\n</html>\" > ./".$name."/".$name.".html"); 
+		print("\n\nEntrer Le Chemin vers '/bootstrap.css' : ");
+		my $pathb = <>;
+		chomp($pathb);
+		system("cp ".$pathb."/bootstrap.css ./".$name."/css");
+		system("echo \"\t\t<link type='text/css' rel='stylesheet' href='./css/bootstrap.css'>\" >> ./".$name."/".$name.".html"); 
+		system("sleep 0.1");
+		system("echo \"bootstrap.css has been imported !\"")
 	}
 
-	elsif ($boot eq "y" && $jque eq "n" || $boot eq "yes" && $jque eq "no")
-	{
-		system("echo \"<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<script type=\"text/javascript\" src=\"./script/".$name.".js\"></script>\n\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/bootstrap.css\">\n\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/".$name.".css\">\n\t\t<title>".$name."</title>\n\t\t<meta charset=\"utf-8\">\n\t</head>\n\t<body>\n\t</body>\n</html>\" > ./".$name."/".$name.".html"); 
-	}
-
-	elsif ($boot eq "n" && $jque eq "y" || $boot eq "no" && $jque eq "yes")
-	{
-		system("echo \"<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<script type=\"text/javascript\" src=\"./script/jquery.js\"></script>\n\t\t<script type=\"text/javascript\" src=\"./script/".$name.".js\"></script>\n\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/".$name.".css\">\n\t\t<title>".$name."</title>\n\t\t<meta charset=\"utf-8\">\n\t</head>\n\t<body>\n\t</body>\n</html>\" > ./".$name."/".$name.".html"); 
-	}
-
-	else
-	{
-		system("echo \"<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<script type=\"text/javascript\" src=\"./script/".$name.".js\"></script>\n\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"./css/".$name.".css\">\n\t\t<title>".$name."</title>\n\t\t<meta charset=\"utf-8\">\n\t</head>\n\t<body>\n\t</body>\n</html>\" > ./".$name."/".$name.".html"); 
-	}
+	system("echo \"\t\t<link type='text/css' rel='stylesheet' href='./css/".$name.".css'>\n\t\t<title>".$name."</title>\n\t\t<meta charset='utf-8'>\n\t</head>\n\t<body>\n\t</body>\n</html>\" >> ./".$name."/".$name.".html"); 
 	
 	print("\n\nVotre projet à été généré :) ! Appuyer sur ENTREE pour quitter.");
 	<>;
