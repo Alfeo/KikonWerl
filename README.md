@@ -13,3 +13,6 @@ Pour l'utiliser lancez le script avec la commande "perl Kikon.pl" et suivez les 
 
 - Werl :
 Werl est un utilitaire à utiliser en collaboration avec Kikon pour une expérience optimale. Ce script vous permettra de mettre en page rapidement un projet HTML en vous proposant une interface afin de placez vos première div en gérant le CSS (id, class et tout les attributs). 
+
+ChangeLog :
+- Possibilité de démarrer un projet PHP Suivant un modèle MVC basique. Compatible avec Werl sous réserve de modifications.
