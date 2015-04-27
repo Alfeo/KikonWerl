@@ -130,8 +130,8 @@ if ($choice == "2")
 		system("sleep 0.1");
 		system("echo \"bootstrap.css has been imported !\"")
 	}
-
-	system("echo \"\t\t<link type='text/css' rel='stylesheet' href='../css/".$name.".css'>\n\t\t<title>".$name."</title>\n\t\t<meta charset='utf-8'>\n\t</head>\n\t<body>\n\t</body>\n</html>\" >> ./".$name."/php/".$name.".php"); 
+	
+	system("echo \"\t\t<link type='text/css' rel='stylesheet' href='../css/".$name.".css'>\n\t\t<title>".$name."</title>\n\t\t<meta charset='utf-8'>\n\t</head>\n\t<body>\n<!-- BDD Connecting Process -->\n\t\t<?php\n\t\t\ttry {\n\t\t\t\t$bdd = new PDO('mysql:host=localhost;dbname=DATABASE', 'USER', 'PW');\n\t\t\t}\n\t\t\tcatch (Exception $e) {\n\t\t\t\tdie('Erreur : ' . $e->getMessage());\n\t\t\t}\n\t\t?>\n<!-- END -->\n\t</body>\n</html>\" >> ./".$name."/php/".$name.".php"); 
 	
 	print("\n\nVotre projet à été généré :) ! Appuyer sur ENTREE pour quitter.");
 	<>;
